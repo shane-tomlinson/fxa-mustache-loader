@@ -1,6 +1,6 @@
 {
   "name": "fxa-mustache-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Mustache webpack loader",
   "main": "index.js",
   "scripts": {

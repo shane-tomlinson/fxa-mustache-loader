@@ -3,15 +3,13 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 module.exports = function (source) {
-  return
-    `
-    var mustache = require("mustache");
-    module.exports = function () {
-      return function (view, partials) {
-        var src = ${JSON.stringify(source)}
-        return mustache.render(src, view, partials);
-      }
-    }();
-    `;
+  return `
+    var mustache = require('mustache');
+    module.exports = function (view, partials) {
+      partials = partials || {};
+      var src = ${JSON.stringify(source)}
+      return mustache.render(src, view, partials);
+    };
+  `;
 };
 
